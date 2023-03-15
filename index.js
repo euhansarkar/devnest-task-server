@@ -3,6 +3,7 @@ const dotenv = require(`dotenv`);
 const cors = require(`cors`);
 const mongoose = require(`mongoose`);
 const userRoutes = require(`./Routes/UserRoutes`);
+const taskRoutes = require(`./routes/taskRoutes`)
 
 const app = express();
 dotenv.config();
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(`/api/auth`, userRoutes);
+app.use(`/api/task`, taskRoutes)
 
 mongoose.set("strictQuery", false);
 mongoose
