@@ -1,12 +1,10 @@
 const bcrypt = require(`bcrypt`);
-const Task = require(`../models/taskModels`);
+const Task = require(`../models/taskModels.js`);
 
 module.exports.addTask = async (req, res, next) => {
   try {
     const { taskname, description, starttime, taskcategory, endtime, email } =
       req.body;
-
-    console.log(taskname, description, starttime, taskcategory, endtime, email);
 
     const task = await Task.create({
       taskname,

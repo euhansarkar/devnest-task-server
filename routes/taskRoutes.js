@@ -1,4 +1,4 @@
-const { addTask, findAllTasks, deleteTask, modifyTask } = require("../Controllers/taskControllers");
+const { addTask, findAllTasks, deleteTask, modifyTask } = require("../controllers/taskControllers.js");
 const router = require(`express`).Router();
 
 router.post(`/addtask`, addTask);
