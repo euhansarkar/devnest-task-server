@@ -29,6 +29,12 @@ mongoose
     console.log(err.message);
   });
 
-const server = app.listen(port, () => {
+
+  app.get(`/`, (req, res) => {
+    res.send(`hello world`);
+  })
+
+
+app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });
